@@ -45,7 +45,7 @@ def mutate(child):
 	return child
 
 plt.ion()
-xs = np.arange(0,9,0.01)
+xs = np.arange(X_BOUND[0],X_BOUND[1],0.01)
 plt.plot(xs, f(xs))
 
 population = random_init()
@@ -67,7 +67,6 @@ while step < N_GENERATIONS:
 	# plot staff
 	if 'sca' in globals(): sca.remove()
 	sca = plt.scatter(decode(population), f_value, s=200, lw=0, c='red', alpha=0.5); plt.pause(0.01)
-	plt.savefig('fig/%s.png'%('0'*(3-len(str(step)))+str(step)))
 
 	# select, cross and mutate
 	population = select(population, fitness)
