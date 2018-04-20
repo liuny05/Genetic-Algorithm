@@ -10,7 +10,7 @@ POP_SIZE = 100        # population size
 KEEP_NUM = 10         # keep KEEP_NUM individual with max fitness while selecting to avoid coverge in local optimal solution
 CROSS_RATE = 0.8      # mating probability (DNA crossover)
 MUTATION_RATE = 0.01  # mutation probability
-N_GENERATIONS = 100   # num of generations
+N_GENERATIONS = 50   # num of generations
 X_BOUND = [0, 9]      # x upper and lower bounds
 
 # define your own function here
@@ -67,6 +67,7 @@ while step < N_GENERATIONS:
 	# plot staff
 	if 'sca' in globals(): sca.remove()
 	sca = plt.scatter(decode(population), f_value, s=200, lw=0, c='red', alpha=0.5); plt.pause(0.01)
+	plt.savefig('fig/%s.png'%('0'*(3-len(str(step)))+str(step)))
 
 	# select, cross and mutate
 	population = select(population, fitness)
@@ -78,4 +79,6 @@ while step < N_GENERATIONS:
 
 plt.figure()
 plt.plot(range(N_GENERATIONS), max_fs)
+plt.xlabel('iter')
+plt.ylabel('max_value')
 plt.ioff(); plt.show()
