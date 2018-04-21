@@ -13,12 +13,33 @@ You can easily define you own function and other parameters.
 
 ![function_max_point](fig/function_max_point.gif)
 
-convergence process:
+convergence curse:
 
-![converge_curse](fig/converge_curse.png)
+![converge_curse](fig/fmp_converge_curse.png)
 
 ### Reference
 
 [Morvan's tutorial](https://morvanzhou.github.io/tutorials/machine-learning/evolutionary-algorithm/2-01-genetic-algorithm/)
 
 [sjyan's answer](https://morvanzhou.github.io/tutorials/machine-learning/evolutionary-algorithm/2-01-genetic-algorithm/)
+
+
+
+## Travelling salesman problem
+
+### Description
+
+Find the shortest path for Travelling salesman problem.
+
+### Visual Results
+
+![tsp](fig/tsp.gif)
+
+convergence curse:
+
+![tsp_converge_curse](fig/tsp_converge_curse.png)
+
+### Reference
+
+[Morvan's tutorial](https://morvanzhou.github.io/tutorials/machine-learning/evolutionary-algorithm/2-03-genetic-algorithm-travel-sales-problem/)
+
